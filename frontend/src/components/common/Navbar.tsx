@@ -53,8 +53,8 @@ const Navbar = () => {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out",
           scrolled
-            ? "py-6 glass-surface-dark border-b border-nepasys-border/50"
-            : "py-8 bg-transparent"
+            ? "py-3 lg:py-6 glass-surface-dark border-b border-nepasys-border/50"
+            : "py-5 lg:py-8 bg-transparent"
         )}
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 flex items-center justify-between">
@@ -80,7 +80,7 @@ const Navbar = () => {
                   ? "bg-nepasys-surface-elevated/80 border-nepasys-border/60 shadow-lg shadow-black/5 dark:shadow-black/20"
                   : "bg-nepasys-surface/60 border-nepasys-border/40 backdrop-blur-sm"
               )}
-              style={{width:'640px'}}
+              style={{ width: '640px' }}
             >
               {navLinks.map((link) => (
                 <a
@@ -126,48 +126,58 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* CTA inside pill */}
-          <a
-            href="#early-access"
-            className={cn(
-              "group relative px-5 py-2 text-sm font-medium rounded-pill transition-all duration-300",
-              "bg-accent text-accent-foreground",
-              "hover:shadow-lg hover:shadow-accent/25",
-              "active:scale-[0.98]"
-            )}
-          >
-            {/* Glow effect */}
-            <span className="absolute inset-0 rounded-pill bg-accent opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-500" />
+          {/* Right Side Group */}
+          <div className="flex items-center gap-3 sm:gap-4">
+            {/* Mobile Theme Toggle (< 1024px) */}
+            <div className="lg:hidden">
+              <ThemeToggle />
+            </div>
 
-            <span className="relative z-10 flex items-center gap-2">
-              Get Early Access
-              <svg
-                className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </span>
-          </a>
+            {/* CTA inside pill - Hidden < 600px */}
+            <a
+              href="#early-access"
+              className={cn(
+                "group cta_button relative px-5 py-3 text-sm font-medium rounded-pill transition-all duration-300",
+                "bg-accent text-accent-foreground",
+                "hover:shadow-lg hover:shadow-accent/25",
+                "active:scale-[0.98]",
+                "max-[600px]:hidden"
+              )}
+            >
+              {/* Glow effect */}
+              <span className="absolute inset-0 rounded-pill bg-accent opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-500" />
 
-          {/* Mobile: Hamburger Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={cn(
-              "lg:hidden relative z-10 p-2 rounded-lg transition-all duration-300",
-              "text-foreground hover:bg-muted/50",
-              mobileMenuOpen && "bg-muted/50"
-            )}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
+              <span className="relative z-10 flex items-center gap-2">
+                Get Early Access
+                <svg
+                  className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </span>
+            </a>
+
+            {/* Mobile: Hamburger Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className={cn(
+                "lg:hidden relative z-10 p-2 rounded-lg transition-all duration-300",
+                "text-foreground hover:bg-muted/50",
+                mobileMenuOpen && "bg-muted/50"
+              )}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
+
         </div>
       </nav>
 
