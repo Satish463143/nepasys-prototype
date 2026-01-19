@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import { Link } from "react-router-dom";
 
 const navLinks = [
-  { label: "Cloud Infrastructure", href: "#infrastructure" },
-  { label: "Courses", href: "#courses" },
-  { label: "In Development", href: "#development" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Cloud Infrastructure", href: "/cloud-infrastructure" },
+  { label: "Courses", href: "/courses" },
+  { label: "In Development", href: "/in-development" },
+  { label: "About", href: "/about-us" },
+  { label: "Contact", href: "/contact-us" },
 ];
 
 const Navbar = () => {
@@ -59,8 +60,8 @@ const Navbar = () => {
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
-          <a
-            href="/"
+          <Link
+            to="/"
             className="group flex items-center gap-2 relative z-10"
           >
             <div className="relative">
@@ -69,7 +70,7 @@ const Navbar = () => {
                 Nepasys
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop: Command Bar Navigation Pill */}
           <div className="hidden lg:block absolute left-1/2 -translate-x-1/2">
@@ -83,9 +84,9 @@ const Navbar = () => {
               style={{ width: '640px' }}
             >
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   onMouseEnter={() => setActiveLink(link.href)}
                   onMouseLeave={() => setActiveLink(null)}
                   className={cn(
@@ -114,7 +115,7 @@ const Navbar = () => {
                     )}
                   />
                   <span className="relative z-10">{link.label}</span>
-                </a>
+                </Link>
               ))}
 
               {/* Separator */}
@@ -134,8 +135,8 @@ const Navbar = () => {
             </div>
 
             {/* CTA inside pill - Hidden < 600px */}
-            <a
-              href="#early-access"
+            <Link
+              to="/contact-us"
               className={cn(
                 "group cta_button relative px-5 py-3 text-sm font-medium rounded-pill transition-all duration-300",
                 "bg-accent text-accent-foreground",
@@ -158,7 +159,7 @@ const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </span>
-            </a>
+            </Link>
 
             {/* Mobile: Hamburger Button */}
             <button
@@ -209,9 +210,9 @@ const Navbar = () => {
             {/* Nav Links */}
             <div className="flex-1 space-y-2">
               {navLinks.map((link, index) => (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={cn(
                     "block px-4 py-3 text-lg font-medium rounded-xl transition-all duration-300",
@@ -224,13 +225,13 @@ const Navbar = () => {
                   }}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
 
             {/* Mobile CTA */}
-            <a
-              href="#early-access"
+            <Link
+              to="/contact-us"
               onClick={() => setMobileMenuOpen(false)}
               className={cn(
                 "block w-full px-6 py-4 text-center text-lg font-medium rounded-xl transition-all duration-300",
@@ -255,7 +256,7 @@ const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
