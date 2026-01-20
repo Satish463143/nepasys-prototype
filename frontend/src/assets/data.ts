@@ -1,6 +1,5 @@
 import { Shield, Globe, FileJson, Box, Activity, Zap, Lock, Monitor, BookOpenCheck, FlaskConical, Network, Rocket, Eye, Linkedin, Twitter, Github, Server, Terminal, ShieldCheck, RefreshCw } from 'lucide-react'
-import globalEdge from '../../public/Global Edge.jpg'
-import zeroTrust from '../../public/Zero Trust.jpg'
+
 
 export const featuresOverview = [
     {
@@ -8,14 +7,14 @@ export const featuresOverview = [
         title: "Global Infrastructure",
         shortDesc: "Multi-region cloud environments",
         fullDesc: "Provision and operate cloud environments across multiple simulated global regions. Deploy workloads, test latency, and understand real-world regional behavior using production-style infrastructure.",
-        image: globalEdge
+        image: './Global Edge.jpg'
     },
     {
         icon: Shield,
         title: "Secure Compute Platform",
         shortDesc: "Isolated, production-grade compute",
         fullDesc: "Run workloads on isolated compute environments with built-in security controls. Experience modern cloud security concepts including identity-based access, network isolation, and encrypted communication.",
-        image: zeroTrust
+        image:'./zero trust.jpg'
     }
 ]
 export const featuresList = [
