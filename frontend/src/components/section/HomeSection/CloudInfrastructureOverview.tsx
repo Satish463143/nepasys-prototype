@@ -16,12 +16,11 @@ const CloudInfrastructureOverview = () => {
                         badge="Cloud Infrastructure"
                         title={
                             <>
-                                Production-Style Cloud Infrastructure, <br/>
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b96384] to-[#ffaaee]">Without the Risk</span>
+                                Cloud Infrastructure Services for <br/>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b96384] to-[#ffaaee]">Modern Enterprises</span>
                             </>
                         }
-                        description="Learn and experiment on real cloud infrastructure designed for education and modern development. From global regions to secure compute, Nepasys mirrors how production systems actually work."
-                        // align="center" // Title component seems to default to center based on previous user edit, but let's be explicit if prop allows, or rely on internal style
+                        description="Design, deploy, and manage secure cloud environments for business-critical workloads. From architecture to operations, Nepasys delivers reliable infrastructure built for scale, security, and performance."
                     />
                 </div>
 

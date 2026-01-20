@@ -5,9 +5,10 @@ import ThemeToggle from "./ThemeToggle";
 import { Link } from "react-router-dom";
 
 const navLinks = [
+  { label: "Solutions", href: "/solutions" },
   { label: "Cloud Infrastructure", href: "/cloud-infrastructure" },
-  { label: "Courses", href: "/courses" },
-  { label: "In Development", href: "/in-development" },
+  { label: "Security", href: "/security" },
+  { label: "Training & LMS", href: "/training-lms" },
   { label: "About", href: "/about-us" },
   { label: "Contact", href: "/contact-us" },
 ];
@@ -28,7 +29,7 @@ const Navbar = () => {
   // Close mobile menu on resize to desktop
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) {
+      if (window.innerWidth >= 1150) {
         setMobileMenuOpen(false);
       }
     };
@@ -54,15 +55,15 @@ const Navbar = () => {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out",
           scrolled
-            ? "py-3 lg:py-6 glass-surface-dark border-b border-nepasys-border/50"
-            : "py-5 lg:py-8 bg-transparent"
+            ? "py-3 nav:py-6 glass-surface-dark border-b border-nepasys-border/50"
+            : "py-5 nav:py-8 bg-transparent"
         )}
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
           <Link
             to="/"
-            className="group flex items-center gap-2 relative z-10"
+            className="group flex items-center gap-2 relative "
           >
             <div className="relative">
               <div className="absolute inset-0 bg-accent/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -73,7 +74,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop: Command Bar Navigation Pill */}
-          <div className="hidden lg:block absolute left-1/2 -translate-x-1/2">
+          <div className="hidden nav:block absolute left-1/2 -translate-x-1/2">
             <div
               className={cn(
                 "flex items-center gap-1 px-2 py-2.5 rounded-pill border transition-all duration-500",
@@ -81,7 +82,7 @@ const Navbar = () => {
                   ? "bg-nepasys-surface-elevated/80 border-nepasys-border/60 shadow-lg shadow-black/5 dark:shadow-black/20"
                   : "bg-nepasys-surface/60 border-nepasys-border/40 backdrop-blur-sm"
               )}
-              style={{ width: '640px' }}
+              style={{ width: '730px' }}
             >
               {navLinks.map((link) => (
                 <Link
@@ -129,8 +130,8 @@ const Navbar = () => {
 
           {/* Right Side Group */}
           <div className="flex items-center gap-3 sm:gap-4">
-            {/* Mobile Theme Toggle (< 1024px) */}
-            <div className="lg:hidden">
+            {/* Mobile Theme Toggle (< 1150px) */}
+            <div className="nav:hidden">
               <ThemeToggle />
             </div>
 
@@ -165,7 +166,7 @@ const Navbar = () => {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className={cn(
-                "lg:hidden relative z-10 p-2 rounded-lg transition-all duration-300",
+                "nav:hidden relative z-10 p-2 rounded-lg transition-all duration-300",
                 "text-foreground hover:bg-muted/50",
                 mobileMenuOpen && "bg-muted/50"
               )}
@@ -185,7 +186,7 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       <div
         className={cn(
-          "fixed inset-0 z-40 lg:hidden transition-all duration-500",
+          "fixed inset-0 z-40 nav:hidden transition-all duration-500",
           mobileMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"

@@ -41,7 +41,7 @@ const CourseCard = ({ course }: { course: Course }) => {
             )}
 
             <div className="mt-auto pt-4 flex items-center text-sm font-medium text-primary/70 group-hover:text-[#b96384] transition-colors">
-                {isLive ? 'Start Learning' : 'Get Notified'}
+                {isLive ? 'View details' : 'Get Notified'}
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </div>
 

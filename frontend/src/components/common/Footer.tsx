@@ -5,13 +5,14 @@ import logo from '/logo.png'
 
 const Footer = () => {
   const navLinks = [
-    { label: 'Home', href: '#' },
-    { label: 'Courses', href: '#courses' },
-    { label: 'Labs', href: '#labs' },
-    { label: 'Features', href: '#features' },
-    { label: 'About', href: '#about' },
-    { label: 'Contact', href: '#contact' },
-  ]
+  { label: 'Home', href: '#' },
+  { label: 'Solutions', href: '/solutions' },
+  { label: 'Cloud & Infrastructure', href: '/cloud-infrastructure' },
+  { label: 'Training & LMS', href: '/training-lms' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact-us' },
+]
+
   return (
     <footer className="relative bg-white dark:bg-[#050505] pt-24 pb-12 overflow-hidden transition-colors duration-300 border-t border-black/5 dark:border-white/5">
       {/* Subtle background glow */}
@@ -26,7 +27,7 @@ const Footer = () => {
               <img src={logo} loading='lazy' alt="Logo" className="w-40" />
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-sm">
-              The infrastructure-first learning platform for modern cloud engineers. Build, deploy, and operate real systems.
+              Nepasys delivers enterprise IT solutions across cloud, infrastructure, security, and consulting—helping organizations build, secure, and scale reliable systems.
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social, idx) => (
@@ -61,9 +62,9 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div className="lg:col-span-4 space-y-6">
-            <h4 className="text-sm font-bold uppercase tracking-widest text-foreground">Stay Updated</h4>
+            <h4 className="text-sm font-bold uppercase tracking-widest text-foreground">Insights & Updates</h4>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Join our newsletter for deep dives into cloud architecture and lab updates.
+              Get updates on new services, training programs, and product releases from Nepasys.
             </p>
             <form className="relative group" onSubmit={(e) => e.preventDefault()}>
               <input
@@ -86,7 +87,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-black/5 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-xs text-muted-foreground/60">
-            &copy; {new Date().getFullYear()} Nepasys. All rights reserved.
+            &copy; {new Date().getFullYear()} Nepasys Pvt Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-xs text-muted-foreground/50">
             <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>

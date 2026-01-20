@@ -3,22 +3,22 @@ import { Cloud, Terminal, Code2, ShieldCheck } from 'lucide-react'
 
 const IntroStrip = () => {
     const features = [
-        {
-            icon: Cloud,
-            text: "Cloud-First Architecture"
-        },
-        {
-            icon: Terminal,
-            text: "Hands-On Infrastructure Labs"
-        },
-        {
-            icon: Code2,
-            text: "Built for Developers & Students"
-        },
-        {
-            icon: ShieldCheck,
-            text: "Production-Ready Learning"
-        }
+    {
+        icon: Cloud,
+        text: "Enterprise Cloud & Infrastructure Solutions"
+    },
+    {
+        icon: ShieldCheck,
+        text: "Secure & Scalable IT Services"
+    },
+    {
+        icon: Terminal,
+        text: "Professional IT Training & LMS"
+    },
+    {
+        icon: Code2,
+        text: "Built for Organizations & Tech Teams"
+    }
     ]
 
     return (

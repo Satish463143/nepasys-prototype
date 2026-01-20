@@ -1,59 +1,23 @@
 import React from 'react'
 import Title from '@/components/common/Title'
+import { reasons } from '@/assets/data'
 import {
-    Cpu,
-    Network,
-    Code2,
-    Layers,
-    Terminal as TerminalIcon,
-    Briefcase,
     MoveRight,
     CheckCircle2,
     XCircle
 } from 'lucide-react'
 
 const WhyUs = () => {
-    const reasons = [
-        {
-            icon: Cpu,
-            title: "Real Infrastructure, Not Sandboxes",
-            description: "Practice on production-grade environments — VMs, containers, Kubernetes, networking — not simplified browser-based demos."
-        },
-        {
-            icon: Network,
-            title: "Infrastructure-First Learning",
-            description: "We start from systems, networking, and architecture — ensuring you understand the 'how' before focusing on tools."
-        },
-        {
-            icon: Code2,
-            title: "Engineer-Designed Curriculum",
-            description: "Every course and lab is structured the way real engineers think, build, and troubleshoot complex systems."
-        },
-        {
-            icon: Layers,
-            title: "Hands-On > Video-Only",
-            description: "Learning happens through building, breaking, fixing, and observing real systems — not passive watching."
-        },
-        {
-            icon: TerminalIcon,
-            title: "Modern Cloud Stack Focus",
-            description: "Deep dive into Kubernetes, Zero Trust security, observability, automation, and real-world DevOps patterns."
-        },
-        {
-            icon: Briefcase,
-            title: "Job-Relevant Skills",
-            description: "What you learn maps directly to the day-to-day requirements of real Cloud, DevOps, and Platform Engineering roles."
-        }
-    ]
 
     const comparison = [
-        { label: "Learning Method", typical: "Video-only watching", nepasys: "Hands-on infrastructure" },
-        { label: "Environment", typical: "Simulated playgrounds", nepasys: "Real cloud environments" },
-        { label: "Focus", typical: "Tool-centric (Cert chasing)", nepasys: "System-centric (Architecting)" }
+        { label: "Approach", typical: "Tool-first implementation", nepasys: "Consulting-led solution delivery" },
+        { label: "Security", typical: "Added later", nepasys: "Built-in security & governance" },
+        { label: "Operations", typical: "Limited post-delivery support", nepasys: "Monitoring + managed support" }
     ]
 
+
     return (
-        <section className="relative py-24 bg-white dark:bg-background transition-colors duration-300">
+        <section className="relative py-24 bg-slate-50 dark:bg-[#050505] overflow-hidden border-t border-black/5 dark:border-white/5 transition-colors duration-300">
             <div className="container mx-auto px-4 md:px-6 relative z-10">
 
                 {/* Intro */}
@@ -62,11 +26,13 @@ const WhyUs = () => {
                         badge="Why Nepasys"
                         title={
                             <>
-                                Built for Real Cloud Engineers <br className="hidden md:block" />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b96384] to-[#ffaaee]">Not Just Learners</span>
+                                Your Trusted Enterprise IT Partner <br className="hidden md:block" />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b96384] to-[#ffaaee]">
+                                    Built for Scale & Security
+                                </span>
                             </>
-                        }
-                        description="Nepasys is designed for people who want to understand how cloud systems actually work — the way they are built, secured, and operated in real companies."
+                        }   
+                        description="Nepasys delivers enterprise IT solutions across cloud, infrastructure, security, and consulting—with structured training integrated to upskill teams and support long-term growth."
                     />
                 </div>
 
@@ -105,7 +71,7 @@ const WhyUs = () => {
                             <div>Metric</div>
                             <div className="flex items-center justify-center gap-2">
                                 <XCircle className="w-3 h-3 text-red-500/50" />
-                                Typical Courses
+                                Typical Vendor
                             </div>
                             <div className="flex items-center justify-center gap-2 text-foreground">
                                 <CheckCircle2 className="w-3 h-3 text-[#b96384]" />
@@ -126,10 +92,9 @@ const WhyUs = () => {
                     </div>
 
                     <p className="text-center mt-10 text-xs text-muted-foreground/50 italic tracking-wide">
-                        "True engineering competence isn't built in a sandbox."
+                        "Enterprise systems need reliability, security, and long-term support—not quick fixes."
                     </p>
                 </div>
-
             </div>
         </section>
     )

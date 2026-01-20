@@ -1,7 +1,7 @@
 import React from 'react'
 import Title from '../../common/Title'
-import { featuresList } from '../../../assets/data'
-const Features = () => {
+import { ITSolutionsList } from '../../../assets/data'
+const ITSolutions = () => {
     return (
         <section className="relative w-full py-24 bg-slate-50 dark:bg-[#050505] overflow-hidden border-t border-black/5 dark:border-white/5 transition-colors duration-300">
             {/* Subtle Grid Background - Adaptive opacity */}
@@ -15,18 +15,17 @@ const Features = () => {
                         badge="Platform Capabilities"
                         title={
                             <>
-                                Powerful Features for <br/>
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b96384] to-[#ffaaee]">Modern Cloud Learning</span>
+                                Enterprise IT Services & <br/>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b96384] to-[#ffaaee]">Technology Solutions</span>
                             </>
                         }
-                        description="Everything you need to build, deploy, and operate real cloud systems — designed for learning and experimentation."
-                        // align="center" // Title component seems to default to center based on previous user edit, but let's be explicit if prop allows, or rely on internal style
+                        description="Delivering secure, scalable, and reliable IT services across cloud, infrastructure, security, and consulting."
                     />
                 </div>
 
                 {/* Feature Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {featuresList.map((feature, idx) => (
+                    {ITSolutionsList.map((feature, idx) => (
                         <div
                             key={idx}
                             className="group relative p-8 bg-white dark:bg-[#0a0a0a] border border-black/5 dark:border-white/5 rounded-xl hover:border-[#b96384]/30 dark:hover:border-[#b96384]/30 shadow-sm dark:shadow-none transition-all duration-300 hover:-translate-y-1"
@@ -38,8 +37,11 @@ const Features = () => {
                             <h3 className="text-xl font-bold text-foreground mb-3 font-[Space_Grotesk]">
                                 {feature.title}
                             </h3>
+                            <span style={{marginBottom:"10px", marginTop:"-10px"}} className="inline-block text-sm py-1 px-2 font-medium text-primary bg-primary/10  rounded-full">
+                                {feature.subTitle}
+                            </span>
 
-                            <p className="text-muted-foreground text-sm leading-relaxed">
+                            <p className="text-muted-foreground mt-5 text-sm leading-relaxed">
                                 {feature.description}
                             </p>
 
@@ -54,4 +56,4 @@ const Features = () => {
     )
 }
 
-export default Features
+export default ITSolutions

@@ -5,6 +5,7 @@ const Courses = () => {
     return (
         <div>
             <CommonBanner />
+            
         </div>
     )
 }

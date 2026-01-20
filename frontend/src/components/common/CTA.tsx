@@ -24,11 +24,11 @@ const CTA = () => {
                     <div className="space-y-6">
                         <h2 className="text-4xl md:text-7xl font-bold tracking-tight font-[Space_Grotesk] leading-[1.1]">
                             Start Building <br className="hidden md:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b96384] to-[#ffaaee]">Real Cloud Systems</span> Today
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b96384] to-[#ffaaee]">Production-Ready Cloud Systems</span> Today
                         </h2>
 
                         <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-                            Learn by designing, deploying, and observing real infrastructure — the way modern cloud teams work. No shortcuts. Just real engineering.
+                            Design, deploy, and operate real cloud infrastructure — the way modern engineering teams build, secure, and scale production systems.
                         </p>
                     </div>
 
@@ -36,7 +36,7 @@ const CTA = () => {
                     <div className="flex flex-col items-center gap-6">
                         <button className="group relative flex items-center gap-3 px-10 py-5 bg-[#b96384] hover:bg-[#a35272] text-white rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(185,99,132,0.4)] active:scale-[0.98]">
                             <Zap className="w-5 h-5 fill-current" />
-                            Explore Courses & Labs
+                            Start a Cloud Project
                             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
 
                             {/* Inner focus ring */}
@@ -44,7 +44,7 @@ const CTA = () => {
                         </button>
 
                         <p className="text-sm text-muted-foreground/60 italic">
-                            No fluff. No shortcuts. Just real infrastructure learning.
+                            No fluff. No shortcuts. Just real infrastructure delivery.
                         </p>
                     </div>
 

@@ -139,3 +139,13 @@
     background: hsl(var(--nepasys-surface) / 0.85);
   }
 }
+@media (max-width: 1280px) {
+  .banner_cloud_text {
+    margin-top: -50px !important;
+  }
+}
+@media (max-width: 1024px) {
+  .banner_dashboard {
+    display: none;
+  }
+}

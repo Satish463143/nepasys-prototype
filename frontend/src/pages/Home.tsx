@@ -2,11 +2,11 @@ import React from 'react'
 import Banner from '../components/section/HomeSection/Banner'
 import IntroStrip from '../components/section/HomeSection/IntroStrip'
 import CloudInfrastructureOverview from '../components/section/HomeSection/CloudInfrastructureOverview'
-import Features from '@/components/section/HomeSection/Features'
+import ITSolutions from '@/components/section/HomeSection/ITSolutions'
 import HowItWorks from '@/components/section/HomeSection/HowItWorks'
 import Courses from '@/components/section/HomeSection/Courses'
 import WhyUs from '@/components/section/HomeSection/WhyUs'
-import Labs from '@/components/section/HomeSection/Labs'
+import OperationsHighlights from '@/components/section/HomeSection/OperationsHighlights'
 import CTA from '@/components/common/CTA'
 
 const Home = () => {
@@ -14,12 +14,12 @@ const Home = () => {
     <div>
       <Banner />
       <IntroStrip />
+      <ITSolutions />
       <CloudInfrastructureOverview />
-      <Features />
-      <HowItWorks />
-      <Courses />
       <WhyUs />
-      <Labs />
+      <OperationsHighlights />
+      <Courses />
+      <HowItWorks />
       <CTA/>
     </div>
   )

@@ -27,22 +27,22 @@ export default function HowItWorks() {
     };
     return (
         <>
-             <div className="my-20">
+            <div className="relative py-24 bg-slate-50 dark:bg-[#050505] overflow-hidden border-t border-black/5 dark:border-white/5 transition-colors duration-300 px-5">
+             <div className="mb-20">
                 <Title 
-                    badge="How Nepasys Works"
+                    badge="How We Deliver"
                     title={
                         <>
-                            From Learning to <br/>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b96384] to-[#ffaaee]">Live Infrastructure</span>
+                           How Nepasys Delivers <br/>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b96384] to-[#ffaaee]">Enterprise IT Solutions</span>
                         </>
                     }
-                    description="A structured workflow that takes you from foundational knowledge to designing, deploying, and observing cloud-grade systems."
-                    // align="center" // Title component seems to default to center based on previous user edit, but let's be explicit if prop allows, or rely on internal style
+                    description="A proven delivery workflow—from discovery and architecture to implementation, security, and ongoing support—built for enterprise reliability."
                 />
             </div>
             <motion.div
                 ref={ref}
-                className="relative max-w-5xl mx-auto mb-20"
+                className="relative max-w-5xl mx-auto"
                 variants={containerVariants}
                 initial="hidden"
                 animate={controls}
@@ -90,7 +90,7 @@ export default function HowItWorks() {
                     ))}
                 </div>
             </motion.div>
-
+            </div>
         </>
     );
 }
