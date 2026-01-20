@@ -64,31 +64,31 @@ import { Course } from '@/types';
 export const courses: Course[] = [
     {
         id: '1',
-        title: 'Cloud Infrastructure Fundamentals',
+        title: 'Cisco Certified Network Associate',
         level: 'Beginner',
         status: 'Live',
-        description: 'Master the core components of modern cloud systems from Compute to VPCs.'
+        description: 'Build a strong foundation in networking. Learn IP addressing, subnetting, VLANs, routing protocols (OSPF, RIP), network security, and VPN basics.'
     },
     {
         id: '2',
-        title: 'Kubernetes in Production',
+        title: 'Cisco Certified Network Professional',
         level: 'Intermediate',
         status: 'Live',
-        description: 'Deep dive into orchestration, service mesh, and scaling strategy.'
+        description: 'Advance your skills to the enterprise level. Master complex routing (OSPF, EIGRP, BGP), scalable switching, VPNs, network automation, and security architecture.'
     },
     {
         id: '3',
-        title: 'Observability & Monitoring',
+        title: 'AWS Cloud Engineering',
         level: 'Intermediate',
         status: 'Coming Soon',
-        description: 'Building surgical visibility into complex distributed systems.'
+        description: 'Learn to architect, deploy, and manage scalable cloud solutions on Amazon Web Services. Master EC2, S3, IAM, VPC, Lambda, CloudFormation, and DevOps workflows.'
     },
     {
         id: '4',
-        title: 'Automated Infrastructure (IaC)',
+        title: 'Microsoft Azure Cloud Engineering',
         level: 'Intermediate',
         status: 'Coming Soon',
-        description: 'Provisioning multi-cloud environments with Terraform and Ansible.'
+        description: 'Build secure, enterprise-grade cloud infrastructure with Microsoft Azure.'
     }
 ];
 
