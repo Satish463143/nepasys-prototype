@@ -150,7 +150,7 @@ const Navbar = () => {
               <span className="absolute inset-0 rounded-pill bg-accent opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-500" />
 
               <span className="relative z-10 flex items-center gap-2">
-                Get Early Access
+                Request Demo
                 <svg
                   className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
                   fill="none"
