@@ -101,7 +101,6 @@
   }
 
   body {
-    height: 200vh;
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     -webkit-font-smoothing: antialiased;

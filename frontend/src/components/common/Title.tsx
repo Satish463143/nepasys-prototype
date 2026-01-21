@@ -7,7 +7,7 @@ interface TitleProps {
     badge?: string;
 }
 
-const Title = ({ subtitle, title, description, badge }: TitleProps) => {
+const Title = ({title, description, badge }: TitleProps) => {
     return (
         <div className={`space-y-6 text-center`}>
             {badge && (

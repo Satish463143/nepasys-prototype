@@ -8,6 +8,7 @@ import Courses from '@/components/section/HomeSection/Courses'
 import WhyUs from '@/components/section/HomeSection/WhyUs'
 import OperationsHighlights from '@/components/section/HomeSection/OperationsHighlights'
 import CTA from '@/components/common/CTA'
+import Future from '@/components/section/HomeSection/Future'
 
 const Home = () => {
   return (
@@ -17,10 +18,11 @@ const Home = () => {
       <ITSolutions />
       <CloudInfrastructureOverview />
       <WhyUs />
+      <Future />
       <OperationsHighlights />
       <Courses />
       <HowItWorks />
-      <CTA/>
+      <CTA />
     </div>
   )
 }

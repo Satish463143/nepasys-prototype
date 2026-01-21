@@ -71,7 +71,7 @@ const WhyUs = () => {
                             <div>Metric</div>
                             <div className="flex items-center justify-center gap-2">
                                 <XCircle className="w-3 h-3 text-red-500/50" />
-                                Typical Vendor
+                                Typical Implementation Partner
                             </div>
                             <div className="flex items-center justify-center gap-2 text-foreground">
                                 <CheckCircle2 className="w-3 h-3 text-[#b96384]" />

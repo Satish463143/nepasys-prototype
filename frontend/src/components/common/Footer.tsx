@@ -2,10 +2,11 @@ import React from 'react'
 import {Send, ArrowUpRight } from 'lucide-react'
 import { socialLinks } from '@/assets/data'
 import logo from '/logo.png'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   const navLinks = [
-  { label: 'Home', href: '#' },
+  { label: 'Home', href: '/' },
   { label: 'Solutions', href: '/solutions' },
   { label: 'Cloud & Infrastructure', href: '/cloud-infrastructure' },
   { label: 'Training & LMS', href: '/training-lms' },
@@ -48,14 +49,14 @@ const Footer = () => {
             <h4 className="text-sm font-bold uppercase tracking-widest text-foreground">Navigation</h4>
             <nav className="grid grid-cols-2 gap-x-8 gap-y-4">
               {navLinks.map((link, idx) => (
-                <a
+                <Link
                   key={idx}
-                  href={link.href}
+                  to={link.href}
                   className="text-sm text-muted-foreground hover:text-[#b96384] transition-colors flex items-center group"
                 >
                   {link.label}
                   <ArrowUpRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 -translate-y-1 transition-all" />
-                </a>
+                </Link>
               ))}
             </nav>
           </div>

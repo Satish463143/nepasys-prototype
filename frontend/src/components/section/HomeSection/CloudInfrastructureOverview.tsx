@@ -1,6 +1,8 @@
 import Title from '../../common/Title'
 import { featuresOverview } from '../../../assets/data'
 import FeatureCard from '../../common/FeatureCard'
+import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const CloudInfrastructureOverview = () => {
     return (
@@ -29,6 +31,12 @@ const CloudInfrastructureOverview = () => {
                     {featuresOverview.map((feature, idx) => (
                         <FeatureCard key={idx} {...feature} />
                     ))}
+                </div>
+                <div className="mt-12 flex justify-center">
+                    <button className="group flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors font-medium">
+                        <Link to="/cloud-infrastructure">Explore Cloud Infrastructure</Link> 
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </button>
                 </div>
             </div>
         </section>

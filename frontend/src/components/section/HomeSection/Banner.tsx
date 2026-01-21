@@ -1,6 +1,7 @@
 import React from 'react'
 import { ArrowRight, Layout, Server, Database, Activity, Cpu, Globe, Zap, GitBranch, CheckCircle2, Terminal } from 'lucide-react'
 import EnterpriseDashboard from '@/components/common/EnterpriseDashboard'
+import { Link } from 'react-router-dom'
 
 const Banner = () => {
     return (
@@ -31,17 +32,17 @@ const Banner = () => {
 
                             <p className="max-w-[600px] text-muted-foreground text-lg md:text-lg mt-5 block leading-relaxed">
                                 Delivering scalable cloud, infrastructure, security, and enterprise IT services—
-                                with professional training integrated into our solutions ecosystem.
+                                with professional training and upskilling available as part of our delivery and enablement model.
                             </p>
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button className="inline-flex h-12 items-center justify-center rounded-lg bg-[#b96384] px-8 text-sm font-medium text-white shadow-[0_0_20px_-5px_#b96384] transition-all hover:bg-[#a04e6d] hover:shadow-[0_0_25px_-5px_#b96384] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
-                                Request IT Consultation
+                                <Link to="/contact-us"> Request IT Consultation</Link>
                                 <ArrowRight className="ml-2 h-4 w-4" />
                             </button>
                             <button className="inline-flex h-12 items-center justify-center rounded-lg border border-input bg-background/50 backdrop-blur-sm px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
-                                Explore Our Solutions
+                                <Link to="/solutions"> Explore Our Solutions</Link>
                             </button>
                         </div>
 

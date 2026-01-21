@@ -36,7 +36,7 @@ const CTA = () => {
                     <div className="flex flex-col items-center gap-6">
                         <button className="group relative flex items-center gap-3 px-10 py-5 bg-[#b96384] hover:bg-[#a35272] text-white rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(185,99,132,0.4)] active:scale-[0.98]">
                             <Zap className="w-5 h-5 fill-current" />
-                            Start a Cloud Project
+                            Request IT Consultation
                             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
 
                             {/* Inner focus ring */}

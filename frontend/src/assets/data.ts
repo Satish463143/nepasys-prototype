@@ -1,5 +1,4 @@
-import { Shield, Globe,Cloud, Wrench,Briefcase,GraduationCap, Activity, Monitor, Users, Network, Headphones, Linkedin, Twitter, Github, Server, Terminal, ShieldCheck, RefreshCw } from 'lucide-react'
-
+import { Shield, Globe,Cloud,Facebook, Layers, Zap, Cpu, Wrench,Briefcase,GraduationCap, Activity, Monitor, Users, Network, Headphones, Linkedin, Twitter, Github, Server, Terminal, ShieldCheck, RefreshCw, Instagram, Youtube } from 'lucide-react'
 
 export const featuresOverview = [
     {
@@ -116,8 +115,10 @@ export const courses: Course[] = [
 export   const socialLinks = [
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
     { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Github, href: '#', label: 'GitHub' },
-  ]
+    { icon: Youtube, href: '#', label: 'Youtube' },
+    { icon: Instagram, href: '#', label: 'Instagram' },
+]
+
 export const operationsHighlights = [
   {
     icon: Activity,
@@ -181,4 +182,26 @@ export const reasons = [
       "Upskill teams using structured programs with progress tracking, assessments, and certifications."
   }
 ]
+export const futureFeatures = [
+    {
+        icon: Layers,
+        title: "Scalable Architecture",
+        description: "Modular, cloud-native systems designed to scale across regions, teams, and workloads.",
+    },
+    {
+        icon: Zap,
+        title: "Innovation-Ready Platform",
+        description: "Built to adopt emerging technologies, modern tooling, and evolving industry standards.",
+    },
+    {
+        icon: Cpu,
+        title: "Extensible Services & Solutions",
+        description: "Flexible foundation that allows new services, learning programs, and capabilities to be introduced seamlessly.",
+    },
+    {
+        icon: Network,
+        title: "Future Partnerships & Integrations",
+        description: "Designed to integrate with external platforms, vendors, and strategic partners as the ecosystem grows.",
+    },
+];
 
